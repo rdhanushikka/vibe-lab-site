@@ -256,6 +256,7 @@
   .channel p { color: var(--ink-soft); font-size: 0.98rem; }
   .channel .btn { justify-self: start; }
   .channel.wa { background: var(--sky); }
+  .channel.no-qr { grid-template-columns: minmax(0, 1fr); }
   .channel.ml { background: var(--yellow); }
   @media (max-width: 860px) { .channels { grid-template-columns: minmax(0, 1fr); } }
   @media (max-width: 480px) { .channel { grid-template-columns: minmax(0, 1fr); } .channel img { width: 120px; height: 120px; } }
@@ -491,8 +492,7 @@
         <p class="lede">Hackathon dates, coding-hour challenges and speaker announcements all go out through WhatsApp and the mailing list. Scan a code or tap a button.</p>
       </div>
       <div class="channels">
-        <div class="channel wa">
-          <img src="qr-whatsapp.png" alt="QR code for the Vibe Lab WhatsApp group" width="132" height="132">
+        <div class="channel wa no-qr">
           <div class="channel-body">
             <h3>WhatsApp group</h3>
             <p>Where dates get posted first and where challenge votes happen. Pitch your own idea here.</p>
