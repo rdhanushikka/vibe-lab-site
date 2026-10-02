@@ -245,7 +245,7 @@
   .join h2 span { color: var(--orange); }
   .join .lede { color: var(--cream-soft); }
   .join .mono { color: var(--sky); }
-  .channels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .channels { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; max-width: 640px; }
   .channel {
     display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 20px; align-items: center;
     background: var(--cream); color: var(--ink); border: 3px solid var(--cream); padding: 20px;
@@ -255,8 +255,6 @@
   .channel h3 { font-weight: 800; font-size: 1.35rem; }
   .channel p { color: var(--ink-soft); font-size: 0.98rem; }
   .channel .btn { justify-self: start; }
-  .channel.wa { background: var(--sky); }
-  .channel.no-qr { grid-template-columns: minmax(0, 1fr); }
   .channel.ml { background: var(--yellow); }
   @media (max-width: 860px) { .channels { grid-template-columns: minmax(0, 1fr); } }
   @media (max-width: 480px) { .channel { grid-template-columns: minmax(0, 1fr); } .channel img { width: 120px; height: 120px; } }
@@ -489,16 +487,9 @@
     <div class="wrap">
       <div>
         <h2>Get in the <span>group.</span></h2>
-        <p class="lede">Hackathon dates, coding-hour challenges and speaker announcements all go out through WhatsApp and the mailing list. Scan a code or tap a button.</p>
+        <p class="lede">Hackathon dates, coding-hour challenges and speaker announcements all go out through the mailing list. Scan the code or tap the button.</p>
       </div>
       <div class="channels">
-        <div class="channel wa no-qr">
-          <div class="channel-body">
-            <h3>WhatsApp group</h3>
-            <p>Where dates get posted first and where challenge votes happen. Pitch your own idea here.</p>
-            <a class="btn" href="https://chat.whatsapp.com/CvT3mkIKcouINcpt3mK5QL">Join on WhatsApp</a>
-          </div>
-        </div>
         <div class="channel ml">
           <img src="qr-mailing.png" alt="QR code for the Vibe Lab mailing list sign-up form" width="132" height="132">
           <div class="channel-body">
