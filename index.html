@@ -55,6 +55,8 @@
 
   a { color: inherit; }
   a:focus-visible, button:focus-visible { outline: 3px solid var(--cobalt); outline-offset: 3px; }
+  a.inline { font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  a.inline:hover { text-decoration-color: var(--orange); }
   img { max-width: 100%; display: block; }
   h1, h2, h3 { margin: 0; text-wrap: balance; line-height: 1.02; }
   p { margin: 0; }
@@ -348,7 +350,7 @@
         </article>
         <article class="step">
           <h3>We vote</h3>
-          <p>The group votes on the pitches through the mailing list and WhatsApp. The winner becomes the sprint.</p>
+          <p>The group votes on the pitches through the <a class="inline" href="#join">mailing list</a> and WhatsApp. The winner becomes the sprint.</p>
         </article>
         <article class="step">
           <h3>We build</h3>
@@ -438,7 +440,7 @@
       <div>
         <p class="mono">This semester</p>
         <h2>Schedule</h2>
-        <p class="lede">Dates are being finalized. Join the mailing list and you'll get each one as soon as it's set.</p>
+        <p class="lede">Dates are being finalized. Join the <a class="inline" href="#join">mailing list</a> and you'll get each one as soon as it's set.</p>
       </div>
       <ul class="sched" aria-label="Upcoming sessions">
         <li><span class="sched-what">Vibe coding hours</span><span class="sched-when mono">TBD</span></li>
