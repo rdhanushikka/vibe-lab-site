@@ -238,6 +238,17 @@
   @media (max-width: 860px) { .who .wrap { grid-template-columns: minmax(0, 1fr); } }
   @media (max-width: 420px) { .roles { grid-template-columns: minmax(0, 1fr); } }
 
+  /* ---------- Schedule ---------- */
+  .schedule { background: var(--paper); border-top: 3px solid var(--ink); padding-block: clamp(48px, 7vw, 88px); }
+  .schedule .wrap { display: grid; gap: clamp(24px, 4vw, 40px); }
+  .schedule h2 { font-family: var(--display); text-transform: uppercase; font-size: clamp(2.4rem, 5.5vw, 4.4rem); line-height: 0.95; }
+  .schedule .lede { margin-top: 14px; }
+  .sched { list-style: none; margin: 0; padding: 0; border: 3px solid var(--ink); background: var(--cream); max-width: 720px; }
+  .sched li { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 20px; border-bottom: 3px solid var(--ink); }
+  .sched li:last-child { border-bottom: 0; }
+  .sched-what { font-weight: 800; font-size: 1.15rem; }
+  .sched-when { background: var(--yellow); border: 2px solid var(--ink); padding: 4px 10px; white-space: nowrap; }
+
   /* ---------- Join ---------- */
   .join { background: var(--ink); color: var(--cream); padding-block: clamp(56px, 8vw, 110px); }
   .join .wrap { display: grid; gap: clamp(28px, 4vw, 48px); }
@@ -270,9 +281,10 @@
   <div class="wrap">
     <a class="wordmark" href="#top">Vibe Lab <span class="slash">/</span></a>
     <nav class="nav-links" aria-label="Sections">
-      <a class="hide-sm" href="#hackathons">Hackathons</a>
       <a class="hide-sm" href="#hours">Coding Hours</a>
       <a class="hide-sm" href="#talks">Talks</a>
+      <a class="hide-sm" href="#hackathons">Hackathons</a>
+      <a class="hide-sm" href="#schedule">Schedule</a>
       <a class="btn sm orange" href="#join">Join the club</a>
     </nav>
   </div>
@@ -315,68 +327,6 @@
       <span>Design × Engineering × AI</span><span>Vibe coding hackathons</span><span>Biweekly coding hours</span><span>Hands-on industry workshops</span><span>Designers welcome</span><span>Engineers welcome</span><span>Beginners welcome</span><span>Tinkerers welcome</span>
       <span class="dup">Design × Engineering × AI</span><span class="dup">Vibe coding hackathons</span><span class="dup">Biweekly coding hours</span><span class="dup">Hands-on industry workshops</span><span class="dup">Designers welcome</span><span class="dup">Engineers welcome</span><span class="dup">Beginners welcome</span><span class="dup">Tinkerers welcome</span>
     </div>
-  </div>
-
-  <!-- Hackathons -->
-  <section class="band program hack" id="hackathons">
-    <div class="wrap">
-      <div class="program-head">
-        <div>
-          <p class="mono">Upcoming topics</p>
-          <h2>Pick a track. Ship something in a day.</h2>
-          <p class="lede">Each hackathon runs on one theme. Teams form on the spot, build with whatever AI tools they like, and demo at the end. No experience needed, only an idea and a laptop.</p>
-        </div>
-        <div class="sticker" aria-hidden="true">
-          <svg viewBox="0 0 400 260">
-            <polygon fill="#F04E2B" stroke="#111010" stroke-width="4" stroke-linejoin="round" points="200,8 226,52 270,18 268,68 326,52 300,96 360,100 316,132 364,166 306,170 330,222 276,196 268,250 226,212 200,254 174,212 132,250 124,196 70,222 94,170 36,166 84,132 40,100 100,96 74,52 132,68 130,18 174,52"/>
-          </svg>
-          <div class="display">Vibe coding<br>hackathons</div>
-        </div>
-      </div>
-
-      <div class="tracks">
-        <article class="track">
-          <h3>Explore What's Next</h3>
-          <p>Explore AI, health tech, fintech and new ways to create.</p>
-          <ul>
-            <li>Beyond the Chatbox</li>
-            <li>Human x Agent</li>
-            <li>Creative Collisions</li>
-            <li>AI for Healthcare</li>
-            <li>Fintech &amp; Finance</li>
-          </ul>
-        </article>
-        <article class="track">
-          <h3>Build for Life</h3>
-          <p>Make everyday life, learning and work better.</p>
-          <ul>
-            <li>Campus Reimagined</li>
-            <li>Learning, Rewritten</li>
-            <li>Your First Customer</li>
-          </ul>
-        </article>
-        <article class="track">
-          <h3>Make Something Unexpected</h3>
-          <p>Follow a strange idea. Build something worth sharing.</p>
-          <ul>
-            <li>Weird but Useful</li>
-            <li>Everyday Magic</li>
-            <li>Make the Internet Fun Again</li>
-          </ul>
-        </article>
-      </div>
-
-      <div class="hack-foot">
-        <p class="mono">Build with AI. All backgrounds welcome.</p>
-        <a class="btn on-blue" href="#join">Get hackathon dates</a>
-      </div>
-    </div>
-  </section>
-
-  <div class="tear" aria-hidden="true" style="background: var(--cobalt);">
-    <svg viewBox="0 0 1200 40" preserveAspectRatio="none">
-      <path fill="#C1DFE4" d="M0,40 L0,22 L38,14 L70,26 L110,10 L150,20 L190,8 L230,24 L275,12 L320,26 L360,6 L400,22 L450,14 L490,28 L530,10 L575,20 L610,8 L655,24 L700,12 L740,26 L780,6 L830,20 L870,12 L910,28 L950,10 L1000,22 L1040,8 L1080,24 L1120,12 L1160,26 L1200,14 L1200,40 Z"/>
-    </svg>
   </div>
 
   <!-- Coding hours -->
@@ -482,6 +432,90 @@
     </div>
   </section>
 
+  <!-- Schedule -->
+  <section class="band schedule" id="schedule">
+    <div class="wrap">
+      <div>
+        <p class="mono">This semester</p>
+        <h2>Schedule</h2>
+        <p class="lede">Dates are being finalized. Join the mailing list and you'll get each one as soon as it's set.</p>
+      </div>
+      <ul class="sched" aria-label="Upcoming sessions">
+        <li><span class="sched-what">Vibe coding hours</span><span class="sched-when mono">TBD</span></li>
+        <li><span class="sched-what">Industry talks</span><span class="sched-when mono">TBD</span></li>
+        <li><span class="sched-what">Vibe coding hackathons</span><span class="sched-when mono">TBD</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="tear" aria-hidden="true" style="background: var(--paper);">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none">
+      <path fill="#2452E6" d="M0,40 L0,22 L38,14 L70,26 L110,10 L150,20 L190,8 L230,24 L275,12 L320,26 L360,6 L400,22 L450,14 L490,28 L530,10 L575,20 L610,8 L655,24 L700,12 L740,26 L780,6 L830,20 L870,12 L910,28 L950,10 L1000,22 L1040,8 L1080,24 L1120,12 L1160,26 L1200,14 L1200,40 Z"/>
+    </svg>
+  </div>
+
+  <!-- Hackathons -->
+  <section class="band program hack" id="hackathons">
+    <div class="wrap">
+      <div class="program-head">
+        <div>
+          <p class="mono">Upcoming topics</p>
+          <h2>Pick a track. Ship something in a day.</h2>
+          <p class="lede">Each hackathon runs on one theme. Teams form on the spot, build with whatever AI tools they like, and demo at the end. No experience needed, only an idea and a laptop.</p>
+        </div>
+        <div class="sticker" aria-hidden="true">
+          <svg viewBox="0 0 400 260">
+            <polygon fill="#F04E2B" stroke="#111010" stroke-width="4" stroke-linejoin="round" points="200,8 226,52 270,18 268,68 326,52 300,96 360,100 316,132 364,166 306,170 330,222 276,196 268,250 226,212 200,254 174,212 132,250 124,196 70,222 94,170 36,166 84,132 40,100 100,96 74,52 132,68 130,18 174,52"/>
+          </svg>
+          <div class="display">Vibe coding<br>hackathons</div>
+        </div>
+      </div>
+
+      <div class="tracks">
+        <article class="track">
+          <h3>Explore What's Next</h3>
+          <p>Explore AI, health tech, fintech and new ways to create.</p>
+          <ul>
+            <li>Beyond the Chatbox</li>
+            <li>Human x Agent</li>
+            <li>Creative Collisions</li>
+            <li>AI for Healthcare</li>
+            <li>Fintech &amp; Finance</li>
+          </ul>
+        </article>
+        <article class="track">
+          <h3>Build for Life</h3>
+          <p>Make everyday life, learning and work better.</p>
+          <ul>
+            <li>Campus Reimagined</li>
+            <li>Learning, Rewritten</li>
+            <li>Your First Customer</li>
+          </ul>
+        </article>
+        <article class="track">
+          <h3>Make Something Unexpected</h3>
+          <p>Follow a strange idea. Build something worth sharing.</p>
+          <ul>
+            <li>Weird but Useful</li>
+            <li>Everyday Magic</li>
+            <li>Make the Internet Fun Again</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="hack-foot">
+        <p class="mono">Build with AI. All backgrounds welcome.</p>
+        <a class="btn on-blue" href="#join">Get hackathon dates</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="tear" aria-hidden="true" style="background: var(--cobalt);">
+    <svg viewBox="0 0 1200 40" preserveAspectRatio="none">
+      <path fill="#111010" d="M0,40 L0,18 L40,26 L80,10 L120,24 L165,8 L205,22 L250,12 L290,28 L335,10 L380,20 L420,6 L465,24 L505,12 L545,26 L590,8 L630,22 L675,14 L715,28 L760,10 L800,22 L845,6 L885,20 L930,12 L970,26 L1010,8 L1055,24 L1095,12 L1140,26 L1200,10 L1200,40 Z"/>
+    </svg>
+  </div>
+
   <!-- Join -->
   <section class="band join" id="join">
     <div class="wrap">
@@ -494,7 +528,7 @@
           <img src="qr-mailing.png" alt="QR code for the Vibe Lab mailing list sign-up form" width="132" height="132">
           <div class="channel-body">
             <h3>Mailing list</h3>
-            <p>One email per event with the details and a calendar link. No newsletter, no noise.</p>
+            <p>One email per event with the details and a calendar link.</p>
             <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSf5l-2TaUK5SGFiJQOhFm5TvYX5MAY7fHVH_gBjLLQ0u_oJmA/viewform">Sign up by email</a>
           </div>
         </div>
